@@ -61,7 +61,7 @@ extension ExpandableTableView: UITableViewDataSource, UITableViewDelegate {
         }
         if !expandedData.isExpandedCell {
             delegate.expandableTableView(self, didSelectRowAt: indexPath)
-            
+            delegate.expandableTableView(self, selectedCell: expandedData.expandedCell, didSelectRowAt: indexPath)
             handleRowExpansion(at: indexPath)
         } else {
             delegate.expandableTableView(self, didSelectExpandedRowAt: indexPath)

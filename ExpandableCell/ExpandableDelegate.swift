@@ -23,6 +23,8 @@ public protocol ExpandableDelegate: UIScrollViewDelegate {
 
     // MARK: Optional Methods
     func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectRowAt indexPath: IndexPath)
+    
+    func expandableTableView(_ expandableTableView: ExpandableTableView, selectedCell: UITableViewCell, didSelectRowAt indexPath: IndexPath)
 
     func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectExpandedRowAt indexPath: IndexPath)
 
@@ -61,6 +63,8 @@ public protocol ExpandableDelegate: UIScrollViewDelegate {
 
 public extension ExpandableDelegate {
     func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectRowAt indexPath: IndexPath) { }
+    
+    func expandableTableView(_ expandableTableView: ExpandableTableView, selectedCell: UITableViewCell, didSelectRowAt indexPath: IndexPath) { }
 
     func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectExpandedRowAt indexPath: IndexPath) { }
 
