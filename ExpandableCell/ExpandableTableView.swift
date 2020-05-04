@@ -60,8 +60,7 @@ extension ExpandableTableView: UITableViewDataSource, UITableViewDelegate {
             tableView.deselectRow(at: indexPath, animated: true)
         }
         if !expandedData.isExpandedCell {
-            delegate.expandableTableView(self, didSelectRowAt: indexPath)
-            delegate.expandableTableView(self, selectedCell: expandedData.expandedCell, didSelectRowAt: indexPath)
+            delegate.expandableTableView(self, didSelectRowAt: expandableProcessor.original(indexPath: indexPath))
             handleRowExpansion(at: indexPath)
         } else {
             delegate.expandableTableView(self, didSelectExpandedRowAt: indexPath)
